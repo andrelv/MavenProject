@@ -40,7 +40,6 @@ public class ShelfServices {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Shelf newShelf(Shelf shelf1) {
-
 		ShelfBusiness.createShelf(shelf1);
 
 		return shelf1;
@@ -49,22 +48,18 @@ public class ShelfServices {
 
 	// editar shelf	
 	@PUT
-	@Path ("/editar{id}")
+	@Path ("/editar")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Shelf editShelf(@PathParam("id") long id, Shelf shelf1) {
-
-		shelf1= ShelfBusiness.consultByIdShelf(id);
-
+	public Shelf editShelf( Shelf shelf1) {
 		ShelfBusiness.editShelf(shelf1);
-
-		return shelf1;
+		return shelf1; 
 	}
 
 
 	//consultar shelf
 	@GET
-	@Path("/consultar{id}")
+	@Path("/consultar/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Shelf consultShelf(@PathParam("id") long id, Shelf shelf1) {
 

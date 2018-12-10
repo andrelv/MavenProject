@@ -29,9 +29,8 @@ private static final ShelfRepository shelfRepository1 = ShelfRepository.getInsta
 	}
 	
 	public static void editShelf(Shelf shelf1) {
-
 		shelfRepository1.editById(shelf1);
-
+		
 	}
 	
 }

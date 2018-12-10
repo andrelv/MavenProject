@@ -48,7 +48,7 @@ public class ProductServices {
 
 		// editar produto	
 		@PUT
-		@Path ("/editar{id}")
+		@Path ("/editar/{id}")
 		@Consumes(MediaType.APPLICATION_JSON)
 		@Produces(MediaType.APPLICATION_JSON)
 		public Product editProduct(@PathParam("id") long id, Product product1) {
@@ -63,7 +63,7 @@ public class ProductServices {
 
 		//consultar produto
 		@GET
-		@Path("/consultar{id}")
+		@Path("/consultar/{id}")
 		@Produces(MediaType.APPLICATION_JSON)
 		public Product consultProduct(@PathParam("id") long id, Product product1) {
 
