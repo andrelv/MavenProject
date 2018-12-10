@@ -12,7 +12,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import io.altar.business.ProductBusiness;
 import io.altar.business.ShelfBusiness;
+import io.altar.model.Product;
 import io.altar.model.Shelf;
 
 @Path("/shelf")
@@ -32,52 +35,60 @@ public class ShelfServices {
 		return "Api is working";
 	}
 
-	// menu criar shelf
+	// menu criar shelf	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Shelf newShef(Shelf shelf1) {
+	public Shelf newShelf(Shelf shelf1) {
 
 		ShelfBusiness.createShelf(shelf1);
+
 		return shelf1;
 	}
 
-	// editar shelf
+
+	// editar shelf	
 	@PUT
-	@Path("/editar{id}")
+	@Path ("/editar{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Shelf editShelf(@PathParam("id") long id, Shelf shelf1) {
 
-		shelf1 = ShelfBusiness.consultByIdShelf(id);
+		shelf1= ShelfBusiness.consultByIdShelf(id);
+
 		ShelfBusiness.editShelf(shelf1);
+
 		return shelf1;
 	}
 
-	// menu consultar shelf
+
+	//consultar shelf
 	@GET
-	@Path("consultar/{id}")
+	@Path("/consultar{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public static Shelf consultShelf(@PathParam("id") long id, Shelf shelf1) {
+	public Shelf consultShelf(@PathParam("id") long id, Shelf shelf1) {
+
 		shelf1 = ShelfBusiness.consultByIdShelf(id);
 		return shelf1;
-	}
 
-	// remover shelf
+	}
+	
+	//remover shelf
 	@DELETE
 	@Path("/remove/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public static Response removeShelf(@PathParam("id") long id) {
-		ShelfBusiness.removeShelf(id);
-		return Response.ok().build();
-	}
+	@Produces(MediaType.APPLICATION_JSON)	
+	public Response removerShelf(@PathParam("id") long id, Shelf shelf1) {
 
-	// get all
+		ShelfBusiness.removeShelf(id);
+		return Response.status(200).build();
+
+	}
+	
 	@GET
 	@Path("/getall")
 	@Produces(MediaType.APPLICATION_JSON)
-
 	public static Collection<Shelf> consultAllShelf() {
+		
 		return ShelfBusiness.consultAllShelf();
 	}
 }
