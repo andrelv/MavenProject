@@ -3,15 +3,21 @@ package io.altar.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product extends Entity{
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Product extends Entity_{
+	
 	
 	private static final long serialVersionUID = 1L;
-
+	
+	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "produtoAlberga")
 	private List<Shelf> listShelfIn;
 	private double valorDesconto;
 	private double iva;
 	private double pvp;
-	
 	
 	public Product() {
 		

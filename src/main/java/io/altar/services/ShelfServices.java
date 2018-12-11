@@ -12,7 +12,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
 import io.altar.business.ProductBusiness;
 import io.altar.business.ShelfBusiness;
 import io.altar.model.Product;
@@ -58,32 +57,27 @@ public class ShelfServices {
 
 
 	//consultar shelf
-	@GET
-	@Path("/consultar/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Shelf consultShelf(@PathParam("id") long id, Shelf shelf1) {
-
-		shelf1 = ShelfBusiness.consultByIdShelf(id);
-		return shelf1;
-
-	}
+//	@GET
+//	@Path("/consultar/{id}")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public Shelf consultShelf(@PathParam("id") long id, Shelf shelf1) {
+//		shelf1 = ShelfBusiness.consultByIdShelf(id);
+//		return shelf1;
+//	}
 	
 	//remover shelf
 	@DELETE
 	@Path("/remove/{id}")
 	@Produces(MediaType.APPLICATION_JSON)	
 	public Response removerShelf(@PathParam("id") long id, Shelf shelf1) {
-
 		ShelfBusiness.removeShelf(id);
 		return Response.status(200).build();
-
 	}
 	
-	@GET
-	@Path("/getall")
-	@Produces(MediaType.APPLICATION_JSON)
-	public static Collection<Shelf> consultAllShelf() {
-		
-		return ShelfBusiness.consultAllShelf();
-	}
+//	@GET
+//	@Path("/getall")
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public static Collection<Shelf> consultAllShelf() {
+//		return ShelfBusiness.consultAllShelf();
+//	}
 }
