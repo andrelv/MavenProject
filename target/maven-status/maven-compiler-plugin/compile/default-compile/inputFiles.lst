@@ -1,0 +1,14 @@
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Business/ProductDto.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Models/BaseEntity.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Models/Shelf.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Business/ShelfBusiness.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Services/ShelfsService.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Repositories/EntityRepository.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Models/Product.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Services/ProductsService.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/Filters/CORSFilter.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Business/ProductBusiness.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/App.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Business/ShelfDto.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Repositories/ShelfRepository.java
+/Users/alunotarde/Desktop/Projecto/MavenProject/src/main/java/io/altar/StockManagmentAPI/Repositories/ProductRepository.java
