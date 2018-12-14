@@ -1,0 +1,2 @@
+INDEX VERSION 1.130+/Users/alunotarde/Desktop/Projecto/TesteAS/.metadata/.plugins/org.eclipse.jdt.core
+1541144603.index
