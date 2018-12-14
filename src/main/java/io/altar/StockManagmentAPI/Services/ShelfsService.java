@@ -33,11 +33,11 @@ public class ShelfsService {
 	}
 
 	@PUT
-	@Path("/editar/{id}")
+	@Path("/editar")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public ShelfDto updateShelf(@PathParam("id")  long id, Shelf shelf) {
-		return shelfBusiness.replaceShelf(shelf);
+	public ShelfDto updateShelf(Shelf shelf) {
+		return shelfBusiness.updateShelf(shelf);
 	}
 
 	@DELETE
@@ -56,7 +56,7 @@ public class ShelfsService {
 	 }
 	 
 	 @GET
-		@Path("/getById/{id}")
+		@Path("/consultar/{id}")
 		@Produces(MediaType.APPLICATION_JSON)
 		public Shelf getShelfById(@PathParam("id") long id) {
 			return shelfBusiness.getShelfById(id);

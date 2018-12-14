@@ -25,7 +25,7 @@ public class ShelfBusiness {
 
 	// Update:
 	@Transactional
-	public ShelfDto replaceShelf(Shelf shelf) {
+	public ShelfDto updateShelf(Shelf shelf) {
 		shelf = shelfRepository.update(shelf);
 		ShelfDto createShelf = new ShelfDto(shelf.getId(), shelf.getProduct(), shelf.getCapacity(), shelf.getPrice());
 		return createShelf;

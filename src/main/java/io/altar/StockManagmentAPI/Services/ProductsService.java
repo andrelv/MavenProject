@@ -33,10 +33,10 @@ public class ProductsService {
 	}
 
 	@PUT
-	@Path("/editar/{id}")
+	@Path("/editar")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public ProductDto updateProduct(@PathParam("id") long id, Product product) {
+	public ProductDto updateProduct(Product product) {
 		return productBusiness.updateProduct(product);
 	}
 
